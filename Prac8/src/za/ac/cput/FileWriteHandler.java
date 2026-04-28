@@ -10,7 +10,7 @@ public class FileWriteHandler {
 
     public static void openFile(String fileName) {
         try {
-            bw = new BufferedWriter(new FileWriter(fileName));
+            bw = new BufferedWriter(new FileWriter(fileName, true));
         } catch (IOException ioe) {
             System.out.println("ioexception occurred");
         }
@@ -18,8 +18,8 @@ public class FileWriteHandler {
 
     public static void processFile(String rec) {
         try {
-            bw = new BufferedWriter(new FileWriter("testout.txt"));
             bw.write(rec);
+            bw.newLine();
         } catch (IOException ioe) {
             System.out.println("ioexception occurred");
         }
@@ -30,7 +30,7 @@ public class FileWriteHandler {
             bw.close();
         } catch (IOException ioe) {
             System.out.println("ioexception occurred");
-        } 
+        }
     }
 
 }// end of class
