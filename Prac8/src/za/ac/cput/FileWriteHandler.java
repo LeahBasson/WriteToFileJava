@@ -23,6 +23,9 @@ public class FileWriteHandler {
         } catch (IOException ioe) {
             System.out.println("ioexception occurred");
         }
+        finally{
+            closeFile();
+        }
     }
 
     public static void closeFile() {
