@@ -22,19 +22,19 @@ public class FileWriteHandler {
             bw.newLine();
         } catch (IOException ioe) {
             System.out.println("ioexception occurred");
-        }
-        finally{
-            closeFile();
+        } finally {
+            try {
+                closeFile();
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+
         }
     }
 
     // you have to close the file after you write to it otherwise data won't be saved.
-    public static void closeFile() {
-        try {
-            bw.close();
-        } catch (IOException ioe) {
-            System.out.println("ioexception occurred");
-        }
+    public static void closeFile() throws IOException {
+        bw.close();
     }
 
 }// end of class
