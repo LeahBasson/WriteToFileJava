@@ -28,6 +28,7 @@ public class FileWriteHandler {
         }
     }
 
+    // you have to close the file after you write to it otherwise data won't be saved.
     public static void closeFile() {
         try {
             bw.close();

@@ -22,8 +22,8 @@ public class Prac8 {
             empName = JOptionPane.showInputDialog("Enter Employee Name (or EXIT to stop):");
         }
 
-        // you have to close the file after you write to it otherwise data won't be saved.
-        FileWriteHandler.closeFile();
+        
+        
     }// end of main
 
 }// end of class
