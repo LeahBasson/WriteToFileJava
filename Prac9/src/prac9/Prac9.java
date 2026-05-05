@@ -6,8 +6,7 @@ import java.io.IOException;
 
 public class Prac9 {
 
-    private String prodTypeStr, prodCatalogNumStr, prodPurchPriceStr, prodSellPriceStr, prodQuantitySoldStr;
-    private String prodDescription;
+    private String prodTypeStr, prodCatalogNumStr, prodDescription, prodPurchPriceStr, prodSellPriceStr, prodQuantitySoldStr;
 
     private FileReader fr;
     private BufferedReader br = null;
@@ -31,9 +30,26 @@ public class Prac9 {
 
     public void processFile() { // don't need to pass the file through here again because we are already using the br which stores the file.
         try {
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) { 
+                // Display all lines
                 System.out.println(line);
+                
+                String [] splitLine = line.split("#");
+                
+                String prodTypeStr = splitLine[0];
+                String prodCatalogNum = splitLine[1];
+                String prodDescription = splitLine[2];
+                int purchPrice = Integer.parseInt(splitLine[3]);
+                int sellPrice = Integer.parseInt(splitLine[4]);
+                int prodQuantity = Integer.parseInt(splitLine[5]);
+                
+                if(prodTypeStr.equals("1")){
+                    double profit = (sellPrice - purchPrice) * prodQuantity;
+                    System.out.println("Profit for prodType 1: " + profit); 
+                }
+                
             }
+
         } catch (IOException fnfe) {
             System.out.println("File IO error...");
             System.out.println(fnfe);
