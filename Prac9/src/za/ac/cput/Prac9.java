@@ -1,4 +1,4 @@
-package prac9;
+package za.ac.cput;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
