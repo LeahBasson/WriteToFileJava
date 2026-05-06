@@ -1,3 +1,5 @@
-Information Technology#L#B#Permanent
-Graphic Design#T#B#Permanent
-Civil Engineering#R#B#Permanent
+
+Information Technology#l#b#Permanent
+Information Technology#l#n#Permanent
+Graphic Design#Tamia#Lee#Permanent
+Civil Engineering#t#y#Permanent
